@@ -77,7 +77,6 @@ h2 {
     position: absolute;
     display: flex;
     align-items: center;  
-    margin: 0;
     padding: 0;
     -webkit-overflow-scrolling: touch;
     overflow: scroll;
@@ -86,6 +85,7 @@ h2 {
     width: 100%;
     top: 0;
     left: 0;
+
     margin-top: 24px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -102,13 +102,17 @@ h2 {
 }
 
 .container {
-    display: block;
+    display: flex;
+    flex-direction: column;
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
     padding-top: 4em;
+    padding-bottom: 4em;
     background: white;
 }
+
+
 
 @media screen and (prefers-reduced-motion: no-preference) {
     .switched .container {
@@ -118,9 +122,29 @@ h2 {
 
 p {
     font-size: 13pt;
+    padding: 0 2vw;
     color: #888;
     line-height: 1.7em;
     font-weight: lighter;
+}
+.bold-font{
+    font-weight: bold;
+}
+
+.underline-input {
+  background: transparent;     /* 去掉背景 */
+  color: #ffffff;
+  border: none;               /* 去掉所有边框 */
+  border-bottom: 2px solid #ffffff; /* 只保留下划线 */
+  outline: none;              /* 去掉焦点时的轮廓 */
+  padding: 8px 0;            /* 调整内边距 */
+  width: 100%;               /* 宽度设置 */
+  box-shadow: none;          /* 去掉阴影 */
+}
+
+/* 焦点状态 */
+.underline-input:focus {
+  border-bottom-color: #007bff; /* 焦点时下划线颜色变化 */
 }
 
 a {
@@ -307,3 +331,11 @@ body.dark {
 .dark #controls {
     background: black;
 }
+
+/* -----------样式修改------------- */
+.topText{
+    position: relative;
+    left: 50%;
+    transform: translateX(-40%); 
+}
+
