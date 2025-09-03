@@ -75,7 +75,8 @@ h2 {
 */
 .outerContainer {
     position: absolute;
-    display: block;
+    display: flex;
+    align-items: center;  
     margin: 0;
     padding: 0;
     -webkit-overflow-scrolling: touch;
@@ -95,6 +96,8 @@ h2 {
         margin-top: 44px;
         background-size: cover;
         background-repeat: no-repeat;
+        display: flex;
+        align-items: center;  
     }
 }
 
